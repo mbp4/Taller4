@@ -18,7 +18,7 @@ class Saludo: AppCompatActivity() {
         texto = findViewById(R.id.saludo)
 
         btnInicio.setOnClickListener {
-            val intent = Intent(this, ActividadPrincipal::class.java)
+            val intent = Intent(this, FragmentListado::class.java)
             startActivity(intent)
         }
 
