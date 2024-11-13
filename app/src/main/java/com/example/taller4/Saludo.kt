@@ -18,9 +18,10 @@ class Saludo: AppCompatActivity() {
         texto = findViewById(R.id.saludo)
 
         btnInicio.setOnClickListener {
-            val intent = Intent(this, FragmentListado::class.java)
+            val intent = Intent(this, ListadoActivity::class.java)
             startActivity(intent)
         }
+
 
         val hora = Calendar.getInstance().get(Calendar.HOUR_OF_DAY) //usamos una variable que guarde la hora en la que se esta haciendo uso de la aplicación
         val bienvenida = when {
