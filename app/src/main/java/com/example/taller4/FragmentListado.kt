@@ -1,5 +1,6 @@
 package com.example.taller4
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -41,6 +42,11 @@ class FragmentListado: Fragment() {
         listado.adapter = itemAdapter
         btnAgregar.setOnClickListener {
             nuevoElemento()
+        }
+
+        btnSensores.setOnClickListener {
+            val intent = Intent(requireContext(), Sensor::class.java)
+            startActivity(intent)
         }
 
         listado.setOnItemClickListener { _, _, position, _ ->
