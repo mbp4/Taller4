@@ -1,5 +1,7 @@
 package com.example.taller4
 
+import android.appwidget.AppWidgetManager
+import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -25,7 +27,12 @@ class FragmentListado: Fragment() {
     private lateinit var itemAdapter: ItemAdapter
 
     companion object{
-       val listaPublica: MutableList<Item> = mutableListOf()
+       val listaPublica: MutableList<Item> = mutableListOf(
+           Item("Elemento 1", "Listado de elementos"),
+           Item("Elemento 2", "Fregar"),
+           Item("Elemento 3", "Hacer la compra")
+       )
+
     }
 
     override fun onCreateView(
@@ -41,9 +48,11 @@ class FragmentListado: Fragment() {
         listado = view.findViewById(R.id.listadoElementos)
         btnSensores = view.findViewById(R.id.btnSensor)
         btnAgregar = view.findViewById(R.id.btnAgregar)
-        listaElementos = mutableListOf()
+
+        listaElementos = listaPublica
         itemAdapter = ItemAdapter(requireContext(), R.layout.item, listaElementos)
         listado.adapter = itemAdapter
+
         btnAgregar.setOnClickListener {
             nuevoElemento()
         }
@@ -87,6 +96,7 @@ class FragmentListado: Fragment() {
             }
             .setNegativeButton("Cancelar", null)
             .show()
+
 
     }
 
