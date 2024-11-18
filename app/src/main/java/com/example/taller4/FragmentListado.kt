@@ -24,6 +24,10 @@ class FragmentListado: Fragment() {
     private lateinit var listaElementos: MutableList<Item>
     private lateinit var itemAdapter: ItemAdapter
 
+    companion object{
+       val listaPublica: MutableList<Item> = mutableListOf()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -77,6 +81,7 @@ class FragmentListado: Fragment() {
 
                 if (nuevoTitulo.isNotEmpty() && nuevaDescripcion.isNotEmpty()) {
                     listaElementos.add(Item(nuevoTitulo, nuevaDescripcion))
+                    listaPublica.add(Item(nuevoTitulo, nuevaDescripcion))
                     itemAdapter.notifyDataSetChanged()
                 }
             }
