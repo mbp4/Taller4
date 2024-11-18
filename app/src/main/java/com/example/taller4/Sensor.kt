@@ -71,13 +71,11 @@ class Sensor: AppCompatActivity(), SensorEventListener {
             val movimiento = Math.sqrt((x * x + y * y + z * z).toDouble())
 
             val GRAVITY = 9.8
-            val UMBRAL = 2.0
+            val UMBRAL = 4.0
 
             if (Math.abs(movimiento - GRAVITY) > UMBRAL) {
-
                 imagen.setBackgroundColor(resources.getColor(R.color.verdePastel))
             } else {
-
                 imagen.setBackgroundColor(resources.getColor(R.color.white))
             }
         }
