@@ -87,9 +87,11 @@ class FragmentListado: Fragment() {
                 val nuevaDescripcion = edttxt2.text.toString().trim()
 
                 if (nuevoTitulo.isNotEmpty() && nuevaDescripcion.isNotEmpty()) {
-                    //listaElementos.add(Item(nuevoTitulo, nuevaDescripcion))
                     listaPublica.add(Item(nuevoTitulo, nuevaDescripcion))
                     itemAdapter.notifyDataSetChanged()
+                    Toast.makeText(context, "Elemento actualizado", Toast.LENGTH_SHORT).show()
+                } else{
+                    Toast.makeText(context, "Por favor, ingrese un título y una descripción", Toast.LENGTH_SHORT).show()
                 }
             }
             .setNegativeButton("Cancelar", null)

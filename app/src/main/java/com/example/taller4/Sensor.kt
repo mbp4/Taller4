@@ -7,6 +7,8 @@ import android.hardware.SensorManager
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class Sensor: AppCompatActivity(), SensorEventListener {
@@ -16,6 +18,7 @@ class Sensor: AppCompatActivity(), SensorEventListener {
     private lateinit var btnVolver: Button
     private lateinit var imagen: ImageView
     private var activado = false
+    private lateinit var layout: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +26,7 @@ class Sensor: AppCompatActivity(), SensorEventListener {
 
         btnVolver = findViewById(R.id.btn_volver2)
         imagen = findViewById(R.id.imageView2)
+        layout = findViewById(R.id.layout)
 
         sensorManager = getSystemService(SENSOR_SERVICE) as SensorManager
         acelerometro = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER)
@@ -74,9 +78,9 @@ class Sensor: AppCompatActivity(), SensorEventListener {
             val UMBRAL = 4.0
 
             if (Math.abs(movimiento - GRAVITY) > UMBRAL) {
-                imagen.setBackgroundColor(resources.getColor(R.color.primaryColor))
+                layout.setBackgroundColor(resources.getColor(R.color.primaryColor))
             } else {
-                imagen.setBackgroundColor(resources.getColor(R.color.backgroundColor))
+                layout.setBackgroundColor(resources.getColor(R.color.backgroundColor))
             }
         }
     }

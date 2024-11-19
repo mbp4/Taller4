@@ -8,6 +8,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.Button
 import android.widget.RemoteViews
+import android.widget.Toast
 
 class Widget: AppWidgetProvider() {
 
@@ -39,6 +40,7 @@ class Widget: AppWidgetProvider() {
 
             views.addView(R.id.widgetLista, itemView)
         }
+
         appWidgetManager.updateAppWidget(appWidgetId, views)
     }
 
@@ -51,7 +53,6 @@ class Widget: AppWidgetProvider() {
                 ComponentName(context, Widget::class.java)
             )
 
-            // Actualizar todos los widgets
             for (appWidgetId in appWidgetIds) {
                 actualizarWidget(context, appWidgetManager, appWidgetId)
             }
