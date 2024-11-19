@@ -26,9 +26,11 @@ En caso de que se quiera visualizar el elemento de manera detallada se pulsara s
 
 El listado tambien tiene un Button que te lleva a un sensor, este sensor es de tipo acelerometro, formado por: 
 
- -> Una imagen: esta imagen cambiará su fondo cuando se detecte un movimiento de cualquier tipo en el teléfono móvil.
+ -> Una imagen: que simule que es un viajero, para que el usuario lo use como si estuviera de ruta.
 
  -> Un Button: el botón permite al usuario volver a la actividad anterior.
+
+En esta activity en caso de que el usuairo haga algun movimiento en el teléfono, el sensor lo detecta y cambiará el fondo para que el usuario sepa que esta en movimiento.
 
 ## Widget: 
 
