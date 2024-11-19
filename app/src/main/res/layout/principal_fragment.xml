@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:orientation="vertical">
 
     <ListView
@@ -14,12 +15,16 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnAgregar"
         android:text="Agregar"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/backgroundColor"
         />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnSensor"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/backgroundColor"
         android:text="Sensor"
         />
 

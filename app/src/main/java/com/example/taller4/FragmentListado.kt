@@ -29,8 +29,6 @@ class FragmentListado: Fragment() {
     companion object{
        val listaPublica: MutableList<Item> = mutableListOf(
            Item("Elemento 1", "Listado de elementos"),
-           Item("Elemento 2", "Fregar"),
-           Item("Elemento 3", "Hacer la compra")
        )
 
     }
@@ -89,7 +87,7 @@ class FragmentListado: Fragment() {
                 val nuevaDescripcion = edttxt2.text.toString().trim()
 
                 if (nuevoTitulo.isNotEmpty() && nuevaDescripcion.isNotEmpty()) {
-                    listaElementos.add(Item(nuevoTitulo, nuevaDescripcion))
+                    //listaElementos.add(Item(nuevoTitulo, nuevaDescripcion))
                     listaPublica.add(Item(nuevoTitulo, nuevaDescripcion))
                     itemAdapter.notifyDataSetChanged()
                 }

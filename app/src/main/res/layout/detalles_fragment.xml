@@ -3,6 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     android:padding="16dp">
 
     <TextView
@@ -10,17 +11,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="24sp"
+        android:textColor="@color/textColorPrimary"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/txt2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/textColorSecondary"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnVolver"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/backgroundColor"
         android:text="Volver" />
 </LinearLayout>

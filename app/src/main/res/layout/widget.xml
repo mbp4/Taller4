@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:padding="8dp"
-    android:background="@android:color/white"
+    android:background="@color/backgroundColor"
     >
 
     <TextView
@@ -13,13 +13,23 @@
         android:text="Listado"
         android:textStyle="bold"
         android:textSize="16sp"
+        android:textColor="@color/textColorPrimary"
         android:gravity="center"
         />
+    <Button
+        android:id="@+id/buttonActualizar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/buttonColor"
+        android:textColor="@color/backgroundColor"
+        android:text="Actualizar Widget"/>
 
     <LinearLayout
         android:id="@+id/widgetLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical" />
+        android:orientation="vertical" >
+
+    </LinearLayout>
 
 </LinearLayout>
