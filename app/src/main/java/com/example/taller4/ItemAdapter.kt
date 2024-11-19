@@ -19,7 +19,6 @@ class ItemAdapter(
 
         val item = items[position]
 
-        // Asumiendo que tienes TextViews con ids `itemTitle` y `itemDescription` en el layout del item
         val titleView = view.findViewById<TextView>(R.id.itemTitle)
 
         titleView.text = item.titulo
